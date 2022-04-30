@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="position-relative py-4 py-xl-5">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5" style="background: #eafbff;">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><img width = "250" height = "150" src="/media/{{doctor.photo}}"></div>
+                        <form class="text-center" method="post">
+                            <div class="mb-3"></div>
+                        </form>
+                        <h1 style="font-size: 24.88px;font-weight: bold;">{{doctor.name}}<br></h1>
+                        <p>{{doctor.qualification}}<br></p>
+                        <p>{{doctor.bio}}<br></p>
+                        <p><a href="/auth/bookappointment/{{doctor.pk}}"><button class="btn btn-primary d-block" type="button" style="margin-top: 21px;width: 178.1354px;background: #01497c;">Book Appointment</button></a><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+
+{% endblock body %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+    <section>
+        <section class="position-relative py-4 py-xl-5">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.133336064624!2d85.74120761492046!3d20.29474738640049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1907923fc9c557%3A0xd3b0b05336a9dfaa!2sInternational%20Institute%20of%20Information%20Technology%20Bhubaneswar!5e0!3m2!1sen!2sin!4v1651260894318!5m2!1sen!2sin" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    <div class="col-md-6 col-xl-4">
+                        <div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-10 col-12">
+                                  <h2>Sign up as a {{ user_type }}</h2>
+                                  <form method="post" novalidate>
+                                    {% csrf_token %}
+                                    <input type="hidden" name="next" value="{{ next }}">
+                                    {{ form|crispy }}
+                                    <button type="submit" class="btn btn-success">Sign up</button>
+                                  </form>
+                                </div>
+                              </div>
+                            {% comment %} <form method = "POST" class="p-3 p-xl-4" action = "/auth/accounts/signup/patient/">
+                                {% csrf_token %}
+                                <h4 style="color: #01497c;">Patient Registration Form</h4>
+                                <div class="mb-3" style="color: #01497c;"></div>
+                                <div class="mb-3" style="color: #01497c;"><label class="form-label" for="email" style="color: #01497c;">Email</label><input class="form-control" type="email" id="email" name="email" style="color: #01497c;border: 1px solid #01497c ;"></div>
+                                <div class="mb-3" style="color: #01497c;border-width: 1px;"><label class="form-label" for="message" style="color: #01497c;border-width: 1px;">Password</label></div><input class="form-control" type="password" name = "password"style="margin-bottom: 24px;color: #01497c;border: 1px solid #01497c;">
+                                <div class="mb-3" style="color: #01497c;border-width: 1px;"><label class="form-label" for="message" style="color: #01497c;border-width: 1px;">Confirm Password</label></div><input class="form-control" type="password" name = "password" style="margin-bottom: 24px;border: 1px solid #01497c;">
+                                <div class="mb-3"></div><button class="btn btn-primary d-block" type="submit" style="margin-top: 21px;width: 178.1354px;background: #01497c;">Sign Up</button>
+                            </form> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    {% endblock body %}

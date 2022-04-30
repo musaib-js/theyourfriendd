@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% block body %}
+    <section class="position-relative py-4 py-xl-5">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5" style="background: #eafbff;">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"><img width = "250" height = "150" src="/media/{{consultant.photo}}"></div>
+                            <form class="text-center" method="post">
+                                <div class="mb-3"></div>
+                            </form>
+                            <h1 style="font-size: 24.88px;font-weight: bold;">{{consultant.name}}<br></h1>
+                            <p>PhD in Psychology<br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container py-4 py-xl-5">
+                <div class="row gy-4 row-cols-2 row-cols-md-4">
+                    <div class="col">
+                        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background: #01497c;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bell">
+                                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
+                                </svg></div>
+                            <div class="px-3">
+                                <h2 class="fw-bold mb-0">20/42</h2>
+                                <p class="mb-0">Appointments</p>
+                            </div>
+                            <div class="progress" style="width: 203.6875px;">
+                                <div class="progress-bar progress-bar-animated" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%;"><span class="visually-hidden">44%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background: #01497c;"><i class="fas fa-pencil-alt"></i></div>
+                            <div class="px-3">
+                                <h2 class="fw-bold mb-0">4</h2>
+                                <p class="mb-0">Blogs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background: #01497c;"><i class="fas fa-hospital-alt"></i></div>
+                            <div class="px-3">
+                                <h2 class="fw-bold mb-0">167</h2>
+                                <p class="mb-0">Successful treatments</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center d-flex flex-column justify-content-center align-items-center py-3">
+                            <div class="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block mb-2 bs-icon lg" style="background: #01497c;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-shield-fill-plus">
+                                    <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z"></path>
+                                </svg></div>
+                            <div class="px-3">
+                                <h2 class="fw-bold mb-0">9</h2>
+                                <p class="mb-0">Years of Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="font-size: 27.88px;font-weight: bold;">Qualification</h1>
+                        <p>And how do you build a plan? You find the right steps to add to it, steps that lead you straight to your goal in the way that suits you the best. So here are a few steps you can take this week on Unacademy to add to your plan and drive your preparation towards success. Answer the maximum out of 20 questions in 30 minutes at Unacademy T20 Champion Test Series for IIT JEE and win Amazon Vouchers and exciting prizes.<br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 style="color: #01497c;font-weight: bold;">Your Posts</h2><button class="btn btn-primary" type="button" style="background: #01497c;">Add your posts</button>
+                    <p class="w-lg-50"></p>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="col">
+                    <div class="card"><img class="img-fluid card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/image%2020.svg">
+                        <div class="card-body p-4">
+                            <p class="text-primary card-text mb-0">Article</p>
+                            <h4 class="card-title">Lorem libero donec</h4>
+                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                            <div class="d-flex"><img class="rounded-circle img-fluid flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Ellipse%2048.png">
+                                <div>
+                                    <p class="fw-bold mb-0"><strong>Dr. Mentee Sharma</strong><br></p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
+                            </div><button class="btn btn-primary" type="button" style="margin-top: 14px;background: #01497c;">Show More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card"><img class="img-fluid card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/image%2020.svg">
+                        <div class="card-body p-4">
+                            <p class="text-primary card-text mb-0">Article</p>
+                            <h4 class="card-title">Lorem libero donec</h4>
+                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                            <div class="d-flex"><img class="rounded-circle img-fluid flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Ellipse%2048.png">
+                                <div>
+                                    <p class="fw-bold mb-0"><strong>Dr. Mentee Sharma</strong><br></p>
+                                    <p class="text-muted mb-0">Erat netus</p>
+                                </div>
+                            </div><button class="btn btn-primary" type="button" style="margin-top: 14px;background: #01497c;">Show More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-4 py-xl-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 style="color: #01497c;">Testimonials</h2>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+                <div class="col">
+                    <div>
+                        <p class="border rounded border-0 shadow p-4" style="background: #01497c;color: rgb(255,255,255);">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Rectangle%2019%20(1).svg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p class="border rounded border-0 border-light shadow p-4" style="background: #01497c;color: rgb(255,255,255);">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Rectangle%2019%20(1).svg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <p class="border rounded border-0 shadow p-4" style="background: #01497c;color: #ffffff;">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/Rectangle%2019%20(1).svg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock body %}
