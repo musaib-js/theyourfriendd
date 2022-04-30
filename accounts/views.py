@@ -12,6 +12,7 @@ from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from home.forms import AppointmentForm
+from home.models import Appointment
 class SignUpView(TemplateView):
     template_name = 'signup.html'
 
@@ -97,7 +98,8 @@ def doctordashboard(request):
     if request.user.is_authenticated:
         if request.user.is_consultant:
             consultant = Consultant.objects.filter(user = request.user).first()
-            context = {'consultant':consultant}
+            appointment = Appointment.objects.filter(doctor = consultant)
+            context = {'consultant':consultant, 'appointment':appointment}
             return render(request, 'doctordashboard.html', context)
         return redirect('/')
 
@@ -106,7 +108,7 @@ def bookappointment(request, pk):
     # profile = Consultant.objects.filter(user = user).first()
     # userlogged = Consultant.objects.filter(user = user).first()
     doctor = Consultant.objects.filter(pk = pk).first()
-    form = AppointmentForm(request.POST, instance = doctor) 
+    form = AppointmentForm(request.POST) 
     context = {'form':form} 
     if form.is_valid():  
         form.save()  

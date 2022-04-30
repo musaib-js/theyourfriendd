@@ -22,4 +22,8 @@ class Appointment(models.Model):
     description = models.TextField()
     doctor = models.ForeignKey(Consultant, on_delete=models.CASCADE)
     appointmentdate = models.CharField(max_length = 25)
+
+    def __str__(self):
+        return self.name + " on " + self.appointmentdate
+    
     
