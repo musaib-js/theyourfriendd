@@ -26,8 +26,8 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="/" style="font-weight: bold;margin-right: 20px;color: rgb(1,73,124);">Home</a></li>
                     <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/doctors" style="font-weight: bold;margin-right: 20PX;color: rgb(1,73,124,0.7);">Consultation</a></li>
-                    <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/selfcare" style="font-weight: bold;margin-right: 20px;color: rgb(1,73,124,0.7);">Self Care</a></li>
-                    <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/blogs" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Blogs</a></li>
+                    <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="#new" style="font-weight: bold;margin-right: 20px;color: rgb(1,73,124,0.7);">Self Care</a></li>
+                    <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="#blog" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Blogs</a></li>
                     {% if request.user.is_authenticated %} {% if request.user.is_consultant %}
                     <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/doctordashboard" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Dashboard</a></li>
                     {% endif %}

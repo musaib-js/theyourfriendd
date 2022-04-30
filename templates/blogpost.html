@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block body %}
 <br>
-{{post.title}}
-{{post.author}}
+<div class = "container">
+Title: {{post.title}}<br> <hr>
+Author: {{post.author}}<br> <hr>
 {{post.body}}
+<br>
+</div>
 {% endblock body %}
