@@ -30,6 +30,8 @@
                     <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="#blog" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Blogs</a></li>
                     {% if request.user.is_authenticated %} {% if request.user.is_consultant %}
                     <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/doctordashboard" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Dashboard</a></li>
+                    {% else %}
+                    <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/myappointments" style="font-weight: bold;margin-right: 20px;color: rgb(1,73,124,0.7);">My Appointments</a></li>
                     {% endif %}
                     <li class="nav-item" style="font-weight: bold;"><a class="nav-link" href="/auth/logout" style="font-weight: bold;margin-right: 20px;color: rgba(1,73,124,0.7);">Logout</a></li>
                     {% else %}
@@ -53,9 +55,9 @@
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
                     <h3 class="fs-6 text-white">Quick Links</h3>
                     <ul class="list-unstyled">
-                        <li><a class="link-light" href="#">Our Services</a></li>
-                        <li><a class="link-light" href="#">Our Plan</a></li>
-                        <li><a class="link-light" href="#">Hosting</a></li>
+                        <li><a class="text-light" href="#">About Us</a></li>
+                        <li><a class="link-light" href="#">Consultation</a></li>
+                        <li><a class="link-light" href="#">Self Care</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
@@ -69,11 +71,13 @@
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
                     <h3 class="fs-6 text-white">Tags</h3>
                     <ul class="list-unstyled">
-                        <li><a class="link-light" href="#">Medical care</a></li>
-                        <li><a class="link-light" href="#">Therapy</a></li>
-                        <li><a class="link-light" href="#">Surgery</a></li>
-                        <li><a class="link-light" href="#">Nurse</a></li>
-                        <li><a class="link-light" href="#">Emergency</a></li>
+                        <li>
+                            <a class="link-light" href="#"></a>
+                        </li>
+                        <li><a class="link-light" href="#">Mental Health</a></li>
+                        <li><a class="link-light" href="#">Depression</a></li>
+                        <li><a class="link-light" href="#">Anxiety</a></li>
+                        <li><a class="link-light" href="#">Bipolar</a></li>
                     </ul>
                 </div>
             </div>
@@ -94,6 +98,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-eb17d6b6-179f-4c1e-9ce0-830ea5532dd9"></div>
     <script src="/static/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>

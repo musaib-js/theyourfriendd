@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 
-from .models import Patient, User, Consultant
+from .models import Patient, User, Consultant, Subscribed_Users
 
 class PatientSignUpForm(UserCreationForm):
 
@@ -12,7 +12,7 @@ class PatientSignUpForm(UserCreationForm):
     @transaction.atomic
     def save(self):
         user = super().save(commit=False)
-        user.is_student = True
+        user.is_patient = True
         user.save()
         patient = Patient.objects.create(user=user)
         patient.save()
@@ -24,7 +24,7 @@ class ConsultantSignUpForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        user.is_teacher = True
+        user.is_consultant = True
         if commit:
             user.save()
         consultant = Consultant.objects.create(user=user)
@@ -46,3 +46,8 @@ class ConsultantForm(forms.ModelForm):
     class Meta:  
         model = Consultant
         fields = ['name', 'qualification', 'speciality', 'clinic', 'contact', 'email', 'photo', 'bio'] 
+
+class SubscriptionForm(forms.ModelForm):
+    class Meta:
+        model = Subscribed_Users
+        fields = ['user']

@@ -12,7 +12,7 @@
         <div class="row">
             {% for c in consultant  %}
             <div class="col-md-4">
-                <div class="card text-center d-lg-flex flex-column align-self-center justify-content-lg-center align-items-lg-end"><img class="card-img w-100 d-block" src="/static/assets/img/Group%207256%20(1).svg">
+                <div class="card text-center d-lg-flex flex-column align-self-center justify-content-lg-center align-items-lg-end"><img class="card-img w-100 d-block" src="/media/{{c.photo}}">
                     <div class="card-img-overlay d-lg-flex flex-column align-items-center align-content-center align-self-center justify-content-lg-end align-items-lg-center" data-bss-hover-animate="flash">
                         <a href = "/auth/doctors/{{c.pk}}"><h4 class="d-block" style="color: rgb(255,255,255);">{{c.name}}<br></h4></a>
                         <p class="d-block" style="color: rgb(255,255,255);">{{c.qualification}}<br></p>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+<br>
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="color: #01497c;font-weight: bold;">Select Your Subscription </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for p in subscription%}
+            <div class="col-md-4">
+                <div class="card"><img class="img-fluid card-img-top w-100 d-block" src="/static/assets/img/download%201.png">
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 15.376px;font-weight: bold;">Plan Name: {{p.name}}<br></h4>
+                        <h4 class="card-title" style="font-size: 15.376px;font-weight: bold;">Duration: {{p.period}}<br></h4>
+                        <h4 class="card-title" style="font-size: 15.376px;font-weight: bold;">Amount: {{p.amount}}<br></h4>
+                        <h4 class="card-title" style="font-size: 15.376px;font-weight: bold;">Benefits: {{p.benefits | linebreaks}}</h4>
+                       <a href = "/auth/selectsubscription/{{p.name}}"> <button class="btn btn-primary" type="button" style="background: #01497c;">Subcsribe Now</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>    
+</section>
+<section style="text-align: center;margin: 38px;"></section>
+<section><img class="img-fluid" src="/static/assets/img/Vector%2025%20(1).svg"></section>
+<br>
+{% endblock body %}

@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block body %}
 <br>
+{% for x in userapp %}
 <div class = "container">
-Title: {{post.title}}<br> <hr>
-Author: {{post.author}}<br> <hr>
-{{post.body}}
+Patient Name: {{x.name}}<br> <hr>
+Author: {{x.gender}}<br> <hr>
+Doctor: {{x.doctor}}
+Date: {{x.appointmentdate}}
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endfor %}
 </div>
-<div class = "container">
 <section><img class="img-fluid" src="/static/assets/img/Vector%2025%20(1).svg"></section>
-</div>
 {% endblock body %}

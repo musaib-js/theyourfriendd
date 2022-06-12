@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.html import escape, mark_safe
@@ -32,6 +33,33 @@ class Consultant(models.Model):
 
     def __str__(self):
         return self.name
+
+class Subscription_Packs(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length = 200)
+    period = models.CharField(max_length = 50)
+    amount = models.IntegerField()
+    benefits = models.TextField()
+    photo = models.ImageField(upload_to = 'media', default = 'one.jpg')
+
+    class Meta:
+        verbose_name_plural = "Subscription Packs"
+
+    def __str__(self):
+        return self.name
+
+class Subscribed_Users(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    subscription_type = models.OneToOneField(Subscription_Packs, on_delete=models.CASCADE, default=None)
+
+    class Meta:
+        verbose_name_plural = "Subscribed Users"
+
+    def __str__(self):
+        return self.user
+    
+
+    
     
     
 
