@@ -183,7 +183,7 @@ tomli==1.0.4
 tqdm==4.62.3
 twisted==21.7.0
 twisted-iocpsupport==1.0.2
-txaio==20.12.1
+txaio==21.2.1
 typing-extensions==3.10.0.2
 tzdata==2021.5
 tzlocal==2.0.0
