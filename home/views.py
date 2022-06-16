@@ -10,9 +10,9 @@ from .models import Post
 # Create your views here.
 def home(request):
     post = Post.objects.all()[0:3]
-    consultant= Consultant.objects.all()[0:3]
+    consultant= Consultant.objects.all()
     context = {'post':post, 'consultant':consultant}
-    return render(request, 'home.html', context)
+    return render(request, 'temps/index.html', context)
 
 def about(request):
     return render(request, 'about.html')
